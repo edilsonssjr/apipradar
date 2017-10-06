@@ -1,0 +1,28 @@
+<div class="panel panel-default" ng-init="getReports()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" 
+class="glyphicon glyphicon-list"> </span> Lista de Reports</p>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+			  <th class="col-sm-3">Nome</th>
+				<th class="col-sm-2">Tipo</th>
+				<th class="col-sm-5">Opções</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="report in reports">
+			  <td>{{ report.name }}</td>
+			  <td>{{ report.type }}</td>
+			  <td> 
+			    <a href="#/reports/{{report._id}}/show" class="btn btn-info"><span class="glyphicon glyphicon-search"></span>  Detalhes  </a>
+			    <a href="#/reports/{{report._id}}/edit" class="btn btn-success"><span class="glyphicon glyphicon-edit"> </span> Editar  </a>
+			  	<a ng-click="deleteReports(report._id)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span> Apagar </a>
+			  </td>
+			</tr>
+			</tbody>
+		</table>		
+    <div>
+<div>

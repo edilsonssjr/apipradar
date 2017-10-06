@@ -1,0 +1,19 @@
+<div class="panel panel-default" ng-init="showReports()">
+	<div class="panel-heading">
+		<p class="panel-title"> Detalhes Report</p>
+	</div>
+	<div class="panel-body">
+		<form>
+			<div class="form-group">
+				<label class="form-control">Id: {{ report._id }}</label>
+				<label class="form-control">Nome: {{ report.name }}</label>
+				<label class="form-control">Tipo: {{ report.type }}</label>
+				<label class="form-control">Latitude: {{ report.latitude }}</label>
+				<label class="form-control">Longitude: {{ report.longitude }}</label>
+				<label class="form-control">Autor: {{ report.author }}</label>
+				<label class="form-control">Data: {{ report.date }}</label>
+				<a href="#/reports" class="btn btn-default btn-danger pull-right"> Cancel</a>
+			</div>
+		</form>
+		<div>
+			<div>
